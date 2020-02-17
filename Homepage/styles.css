@@ -1,0 +1,29 @@
+.logo {
+	display: inline-block;
+	padding: 0;
+    padding: 44px 0px 15px 50px;
+    background-color: aqua;
+}
+
+.main-menu {
+	list-style: none;
+	float: right;
+}
+
+.main-menu li {
+	display: inline-block;
+	position: relative;
+}
+
+.main-menu li a {
+	display: block;
+	font-size: 16px;
+	color: #ffffff;
+	padding: 44px 10px;
+    margin-left: 60px;
+    background-color:blue;
+}
+
+.main-menu li a:hover {
+	color: #fc0254;
+}
