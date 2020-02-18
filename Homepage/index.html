@@ -1,26 +1,59 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-    <head>
-        <title> GAIT</title>
-        <meta charset="UTF-8">
+	<head>
+		<title>GAIT</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body class="landing">
 
-        <!-- Main Stylesheets -->
-        <link rel="stylesheet" href="styles.css"/>
-    
-    </head>
-    <body>
-        <!-- Page Preloder -->
-	    <div id="preloder">
-		    <div class="loader"></div>
-        </div>
-        <header>
-           <a  href="index.html"><h1 class="logo"> GAIT</h1> </a> 
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1 class="logo"><strong><a href="index.html">GAIT</a></strong></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href=#>Browse Products</a></li>
+						<li><a href=#>Sign In</a></li>
+						<li><a href=#>Sign Up</a></li>
+					</ul>
+				</nav>
+			</header>
 
-            <ul class="main-menu">
-			    <li><a href="index.html">Home</a></li>
-			    <li><a href="#">Login</a></li>
-			    <li><a href="#">Sign Up</a></li>
-		    </ul>
-        </header>
-    </body>
+			<a href="#menu" class="navPanelToggle"></a>
+
+		<!-- Banner -->
+			<section id="banner">
+                <p> GAIT is a platform for gaming products review. Search for yours below!</p>
+                <form action=#>
+                    <input type="text" placeholder="Search.." name="search">
+                    <button class="sbtn" type="submit">Submit</button>
+                  </form>
+			</section>
+
+	
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled</li>
+						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
