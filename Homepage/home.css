@@ -1,0 +1,35 @@
+
+p{
+    color: white;
+}
+
+* Banner */
+	input[type=text] {
+			padding: 6px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: none;
+			width: 450px;
+		  
+		  
+	}
+
+
+ .sbtn {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+
+ }
+	#banner {
+        padding: 16em 0 13em 0;
+
+		background-attachment: fixed;
+		background-image: url("overlay.png"), url("bg.jpg");
+		background-position: center top;
+		background-size: cover;
+		line-height: 1.75;
+		text-align: center;
+		width: 100%;
+	}
