@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/3ec1573dc2.js" crossorigin="anonymous"></script>
   <script src="home.js"></script>
 
@@ -61,14 +62,24 @@
       </div>
     </header>
 
-     	<!-- Banner -->
-			<section id="banner">
-                <p> GAIT is a platform for gaming products review. Search for yours below!</p>
-                <form action=#>
-                    <input type="text" placeholder="Search.." name="search">
-                    <button class="sbtn" type="submit" onclick="changeColor()">Submit</button>
-                  </form>
-			</section>
+	<div class="container">
+		<ul class="thumb">
+			<li><a href="img/img1.jpg" target="ingBox"><img src="img/thumb1.jpg" alt=""></a></li>
+			<li><a href="img/img2.jpg" target="ingBox"><img src="img/thumb2.jpg" alt=""></a></li>
+			<li><a href="img/img3.jpg" target="ingBox"><img src="img/thumb3.jpg" alt=""></a></li>
+		</ul>
+		<div class="imgBox"><img src="img/img1.jpg" alt=""></div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.thumb a').mouseover(function(e){
+				e.preventDefault();
+				$('.imgBox img').attr("src", $(this).attr("href"));
+			})
+		})
+	</script>
 
     <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
         <div class="conatiner">
