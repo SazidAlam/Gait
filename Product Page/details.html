@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product Details</title>
+		<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Style CSS -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<ul class="thumb">
+					<li><a href="img/img1.jpg" target="ingBox"><img src="images/thumb1.jpg" alt=""></a></li>
+					<li><a href="img/img2.jpg" target="ingBox"><img src="images/thumb2.jpg" alt=""></a></li>
+					<li><a href="img/img3.jpg" target="ingBox"><img src="images/thumb3.jpg" alt=""></a></li>
+				</ul>
+				<div class="imgBox"><img src="images/img1.jpg" alt=""></div>
+			</div>
+			<div class="col-md-6">
+				<h1>Product Details</h1>
+				<hr>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore dolorem quisquam aliquam maxime reiciendis pariatur maiores unde minus sequi veritatis architecto inventore repellat perspiciatis qui similique eligendi, error, vero iure!</p>
+				<h4>Rating: #</h4>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.thumb a').mouseover(function(e){
+				e.preventDefault();
+				$('.imgBox img').attr("src", $(this).attr("href"));
+			})
+		})
+	</script>
+</body>
+</html>
