@@ -5,10 +5,10 @@
   
   <title>Gait Admin Dashboard</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/home.css">
   <script src="https://kit.fontawesome.com/3ec1573dc2.js" crossorigin="anonymous"></script>
-  <script src="home.js"></script>
+  <script src="js/home.js"></script>
 
 </head>
 
@@ -28,7 +28,7 @@
               <a href="product.html" class="nav-link">Browse</a>
             </li>
             <li class="nav-item px-2">
-              <a href="signin/signin.html" class="nav-link">Log In</a>
+              <a href="../" class="nav-link">Log In</a>
             </li>
             <li class="nav-item px-2">
               <a href="signup/signup.html" class="nav-link">Sign up</a>

@@ -1,32 +1,8 @@
 <?php
-   include("connection.php");
-  //  session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
-      
-      $myusername = mysqli_real_escape_string($conn,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
-      
-      $sql = "SELECT * FROM info WHERE user='$myusername'";
-      $result = mysqli_query($conn,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
-      
-      $count = mysqli_num_rows($result);
-      
-      
-        if ($count > 0){
-          if($myusername==$row['username'] && $mypassword==$row['pass']) {
-            header("Location: profile.html");
-        } else {
-            header("Location:login.php?id=username already taken or your password is incorrect. Please try again");
-        }
-        }      
-    
-
-     
-   }
+include('session.php'); // Includes Login Script
+if(isset($_SESSION['login_user'])){
+header("location: profile.php"); // Redirecting To Profile Page
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,22 +58,25 @@
               <h4>Account Login</h4>
             </div>
             <div class="card-body">
-              <form>
+              <form action="" method="post">
                 <div class="form-group">
                   <label for="email">User Name</label>
-                  <input type="text" name="username" class="form-control">
+                  <input id="name" type="text" name="username" class="form-control">
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" name="password" class="form-control">
+                  <input id="password" type="password" name="password" class="form-control">
                 </div>
-                <input type="submit" class="btn btn-primary btn-block" value="Login">
+                <input name="submit" type="submit" class="btn btn-primary btn-block" value="Login">
+                <span><?php echo $error; ?></span>
+
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <a href="../Homepage/signup/signup.php" > register </a>
   </section>
 
   <!-- <footer id="main-footer" class="ab">

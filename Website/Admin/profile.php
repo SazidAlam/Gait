@@ -1,3 +1,11 @@
+
+<?php
+include('connection.php');
+if(!isset($_SESSION['login_user'])){
+header("location: login.php"); // Redirecting To Home Page
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,6 +120,7 @@
                 </div>
                 <div class="form-group">
                   <label for="body">Bio</label>
+                  <p><?php echo $login_session; ?> </p>
                   <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur vel aliquam a commodi eligendi, esse quos perspiciatis, quas aliquid voluptates iure. Voluptatibus nisi iste voluptatum maxime dicta quisquam, nihil id!</textarea>
                 </div>
               </form>
