@@ -29,7 +29,7 @@
 
             <div class="col-3 ">
               <div class="site-logo">
-                <a href="home.html" class="font-weight-bold" >GAIT</a>
+                <a href="home.php" class="font-weight-bold" >GAIT</a>
               </div>
             </div>
 
@@ -42,9 +42,9 @@
 
               <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
-                  <li class="active"><a href="home.html" class="nav-link">Home</a></li>
+                  <li class="active"><a href="home.php" class="nav-link">Home</a></li>
                   <li><a href="../Admin/views/users/login.php" class="nav-link">Sign In</a></li>
-                  <li><a href=# class="nav-link">Sign Up</a></li>
+                  <li><a href="../Admin/views/users/register.php" class="nav-link">Sign Up</a></li>
                 </ul>
               </nav>
             </div>
@@ -72,7 +72,7 @@
         <div class="row">
           <div class="col-md-3">
             <div class="site-logo-footer">
-              <a href="home.html">G A I T</a>
+              <a href="home.php">GAIT</a>
             </div>
           </div>
           <div class="col-md-8 ml-auto">
