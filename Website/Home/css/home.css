@@ -2,7 +2,19 @@
 html {
   overflow-x: hidden; }
 
+/*---------------------------------------------------------*/
+@media screen and (min-width: 400px) {
+  .site-logo {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
 
+  @media (max-width: 991.98px) {
+
+    .site-navbar .site-logo {
+      float: left;
+      position: relative; } }
+/*---------------------------------------------------------*/
 
 .site-footer {
   padding: 4em 0;
