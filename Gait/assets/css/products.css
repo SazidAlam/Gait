@@ -1,0 +1,110 @@
+html,
+body,
+header,
+.carousel {
+  height: 60vh;
+}
+
+@media (max-width: 740px) {
+
+  html,
+  body,
+  header,
+  .carousel {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+
+  html,
+  body,
+  header,
+  .carousel {
+    height: 100vh;
+  }
+}
+
+.tagline {
+
+padding-top: 160px;
+position: relative;
+height: 55px;
+text-align: center;
+font-size: 60px;
+font-style: italic;
+font-family: Brush Script MT;
+
+text-shadow:5px 5px 5px #abd5ff;
+
+}
+/*--------------------------------------- */
+.footer {
+    padding: 60px;
+    background-color:  #fff6da; 
+}
+.footer-suscribe-form .btn {
+    color: #fff; }
+  
+  .ftco-blocks-cover-1 .ftco-service-image-1 {
+    margin-top: -70px;
+    position: static; }
+  
+  .ftco-cover-1 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+    .ftco-cover-1, .ftco-cover-1 .container > .row {
+      height: 100vh;
+      min-height: 900px; }
+    .ftco-cover-1.innerpage, .ftco-cover-1.innerpage .container > .row {
+      height: 90vh;
+      min-height: 700px; }
+    .ftco-cover-1 > .container {
+      position: relative; }
+    .ftco-cover-1.overlay {
+      position: relative; }
+      .ftco-cover-1.overlay:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .5;
+        background: #000; }
+      .ftco-cover-1.overlay h1 {
+        color: #fff;
+        font-size: 3rem; }
+      .ftco-cover-1.overlay p {
+        color: #fff; }
+        .ftco-cover-1.overlay p a {
+          color: #fff;
+          font-weight: 700; }
+          .ftco-cover-1.overlay p a:hover {
+            text-decoration: none; }
+      .ftco-cover-1.overlay form .form-control,
+      .ftco-cover-1.overlay form .btn {
+        height: 55px;
+        border-radius: 4px; }
+      .ftco-cover-1.overlay form .form-control {
+        padding-left: 20px;
+        padding-right: 20px;
+        border-color: transparent;
+        margin-right: 10px; }
+      .ftco-cover-1.overlay form .btn {
+        border-color: transparent; }
+  
+  
+  .bg-light {
+    background-color: #f6f5f5 !important; }
+  
+  
+  .site-logo-footer a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900 !important; }
+  
+  .links li {
+    margin-bottom: 10px; }
+  
