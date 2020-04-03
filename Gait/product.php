@@ -1,4 +1,10 @@
+<?php
 
+include "config.php";
+include "header.php";
+session_start();
+
+?>
 
 <html>
 	<head>

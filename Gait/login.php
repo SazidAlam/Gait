@@ -78,6 +78,8 @@ if(is_array($row)) {
   $_SESSION['is_logged_in'] = true;
 $_SESSION["id"] = $row['id'];
 $_SESSION["name"] = $row['name'];
+$_SESSION["email"] = $row['email'];
+$_SESSION["create_date"] = $row['create_date'];
 } else {
 $message = "Invalid Username or Password!";
 }
