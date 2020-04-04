@@ -47,14 +47,14 @@ include "config.php";
 
 				<form method="post" action="" class="login100-form validate-form flex-sb flex-w">
 					
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "email is required">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 					</div>
           
           <div style= " padding: 20px;" >      </div>
 					
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "password is required">
 						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 					</div>
