@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 02, 2020 at 12:55 PM
--- Server version: 8.0.18
--- PHP Version: 7.3.11
+-- Host: 127.0.0.1
+-- Generation Time: Apr 04, 2020 at 05:04 PM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -30,18 +30,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `name`, `email`, `password`, `create_date`) VALUES
-(1, 'sazid', 'sazid.alam@northsouth.edu', '1234', '2020-03-28 09:58:09');
+(2, 'ananna', 'ananna@student.com', 'ananna', '2020-04-04 21:04:09');
 
 -- --------------------------------------------------------
 
@@ -51,9 +51,9 @@ INSERT INTO `admin` (`id`, `name`, `email`, `password`, `create_date`) VALUES
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
   `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `category`
@@ -68,91 +68,16 @@ INSERT INTO `category` (`id`, `name`, `create_date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `images`
---
-
-CREATE TABLE `images` (
-  `id` int(30) NOT NULL,
-  `img` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `images`
---
-
-INSERT INTO `images` (`id`, `img`) VALUES
-(1, 'img/1585287462.png'),
-(2, 'img/1585287532.png'),
-(3, 'img/1585291220.png'),
-(4, 'img/1585291252.png'),
-(5, 'img/1585291467.png'),
-(6, 'img/1585292605.png'),
-(7, 'img/1585308315.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `login_user`
---
-
-CREATE TABLE `login_user` (
-  `id` int(11) NOT NULL,
-  `name` varchar(60) NOT NULL,
-  `user_name` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login_user`
---
-
-INSERT INTO `login_user` (`id`, `name`, `user_name`, `password`) VALUES
-(1, 'sazid', 'sazid_alam', '1234');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `product`
---
-
-CREATE TABLE `product` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `category` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `image` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci NOT NULL,
-  `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `product`
---
-
-INSERT INTO `product` (`id`, `title`, `category`, `image`, `description`, `create_date`) VALUES
-(1, 'test', 'test', 'test.jpg', 'all about test', '2020-03-26 20:29:04'),
-(2, 'test2', 'test2', 'test2.png', 'sdasd', '2020-03-26 20:29:35'),
-(3, '', '', '', '', '2020-03-26 21:55:53'),
-(4, 'test title', 'sdf', '', 'fsff', '2020-03-26 21:58:41'),
-(5, 'test title', 'sdf', '', 'fsff', '2020-03-26 22:08:51'),
-(6, '', '', '', '', '2020-03-26 22:09:10'),
-(7, 'sadas', 'asd', '', 'adasd', '2020-03-26 16:49:23'),
-(8, 'dasd', 'aa', '', 'aa', '2020-03-27 10:52:36'),
-(9, 's', 'sdf', '', 's', '2020-03-27 10:54:04'),
-(10, 'test title', 'aa', '', 'aa', '2020-03-27 10:56:36');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `uploadedimage`
 --
 
 CREATE TABLE `uploadedimage` (
   `id` int(11) NOT NULL,
-  `imagename` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `body` varchar(5000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `link` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `imagename` varchar(100) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `body` varchar(5000) NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `uploadedimage`
@@ -178,21 +103,21 @@ INSERT INTO `uploadedimage` (`id`, `imagename`, `name`, `body`, `link`) VALUES
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `create_date`) VALUES
-(1, 'Sazid', 'sazid.alam@northsouth.edu', '1234', '2020-03-26 12:49:23'),
 (2, 'test', 'test@test.com', 'test', '2020-03-26 19:31:32'),
 (3, 'test2', 'test2@test.com', 'test2', '2020-03-28 09:43:30'),
-(4, 'test 4', 'test4@test.com', '1234', '2020-03-28 13:08:36');
+(4, 'test 4', 'test4@test.com', '1234', '2020-03-28 13:08:36'),
+(5, 'Ishrat Jahan', 'ishrat@ishrat.com', 'ishrat', '2020-04-04 20:55:06');
 
 --
 -- Indexes for dumped tables
@@ -208,18 +133,6 @@ ALTER TABLE `admin`
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `images`
---
-ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `product`
---
-ALTER TABLE `product`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -242,25 +155,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `images`
---
-ALTER TABLE `images`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `product`
---
-ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `uploadedimage`
@@ -272,7 +173,7 @@ ALTER TABLE `uploadedimage`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
