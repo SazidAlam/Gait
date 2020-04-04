@@ -9,7 +9,7 @@ if(isset($_POST["query"]))
 	$search = mysqli_real_escape_string($conn, $_POST["query"]);
 	$query = "
 	SELECT * FROM uploadedimage
-	WHERE pname LIKE '%".$search."%'
+	WHERE name LIKE '%".$search."%'
 	OR link LIKE '%".$search."%'
 	";
 }
@@ -34,7 +34,7 @@ if(mysqli_num_rows($result) > 0)
 	{
 		$output .= '
 			<tr>
-				<td>'.$row["pname"].'</td>
+				<td>'.$row["name"].'</td>
 				<td>'.$row["link"].'</td>
 				
 				<td>'.'<img src="imagesuploadedf/'.$row['imagename'].'" height="150" width="150" >'.'</td>

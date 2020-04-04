@@ -7,11 +7,9 @@
 
 
   $nam = $_SESSION['name'];
- 	$query = "SELECT * FROM uploadedimage WHERE uname LIKE '%".$nam."%'";
+ 	$query = "SELECT * FROM uploadedimage WHERE name LIKE '%".$nam."%'";
  
 	$result = mysqli_query($conn, $query);
-
-	
 
 
 ?>
@@ -64,6 +62,7 @@
       	<h3><?php echo $_SESSION["create_date"]; ?></h3>
       </div>
     </div>
+    
     <div class="col-8">
       <?php 
 
