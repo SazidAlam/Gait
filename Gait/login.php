@@ -73,6 +73,7 @@ $message="";
 if(count($_POST)>0) {
  
 $result = mysqli_query($conn,"SELECT * FROM user WHERE email='" . $_POST["email"] . "' and password = '". $_POST["password"]."'");
+
 $row  = mysqli_fetch_array($result);
 if(is_array($row)) {
   $_SESSION['is_logged_in'] = true;
