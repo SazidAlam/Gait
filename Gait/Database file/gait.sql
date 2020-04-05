@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2020 at 05:04 PM
+-- Generation Time: Apr 05, 2020 at 06:46 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -68,6 +68,38 @@ INSERT INTO `category` (`id`, `name`, `create_date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `card_number` bigint(20) NOT NULL,
+  `card_exp_month` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `card_exp_year` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `item_price` float(10,2) NOT NULL,
+  `item_price_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `paid_amount` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `paid_amount_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `txn_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `payment_status` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `modified` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `name`, `email`, `card_number`, `card_exp_month`, `card_exp_year`, `item_name`, `item_number`, `item_price`, `item_price_currency`, `paid_amount`, `paid_amount_currency`, `txn_id`, `payment_status`, `created`, `modified`) VALUES
+(2, 'Ishrat Jahan', 'test@test.com', 4242424242424242, '12', '2022', 'Demo Product', 'PN12345', 2500.00, 'USD', '2500', 'usd', 'txn_1GUbTgKV46qoqwE8PM3nLcQY', 'succeeded', '2020-04-05 22:37:45', '2020-04-05 22:37:45');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `uploadedimage`
 --
 
@@ -115,7 +147,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `create_date`) VALUES
 (2, 'test', 'test@test.com', 'test', '2020-03-26 19:31:32'),
-(3, 'test2', 'test2@test.com', 'test2', '2020-03-28 09:43:30'),
+(3, 'test2', 'test2@test.com', '123456', '2020-03-28 09:43:30'),
 (4, 'test 4', 'test4@test.com', '1234', '2020-03-28 13:08:36'),
 (5, 'Ishrat Jahan', 'ishrat@ishrat.com', 'ishrat', '2020-04-04 20:55:06');
 
@@ -133,6 +165,12 @@ ALTER TABLE `admin`
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -162,6 +200,12 @@ ALTER TABLE `admin`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `uploadedimage`
