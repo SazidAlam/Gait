@@ -101,5 +101,5 @@ if(!empty($_POST['stripeToken'])){
             <h1 class="error">Your Payment has Failed</h1>
         <?php } ?>
     </div>
-    <a href="index.php" class="btn-link">Back to Payment Page</a>
+    <a href="index.php" class="btn-link">Back to HomePage</a>
 </div>
