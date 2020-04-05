@@ -44,18 +44,18 @@ include "config.php";
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-50 p-b-90">
-	<h4 style="padding:10px; text-align: center; color: #3b4eda;"> Login to Your account here. </h4>
+      <h4 style="padding:10px; text-align: center; color: #3b4eda;"> Reset Your Password</h4>
 				<form method="post" action="" class="login100-form validate-form flex-sb flex-w">
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "email is required">
-						<input class="input100" type="text" name="email" placeholder="Email">
+						<input class="input100" type="text" name="email" placeholder=" Enter Email">
 						<span class="focus-input100"></span>
 					</div>
           
           <div style= " padding: 20px;" >      </div>
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder=" Enter New Password">
 						<span class="focus-input100"></span>
 					</div>
 					
@@ -64,14 +64,8 @@ include "config.php";
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 		
 						</div>
-
-						<div style= " padding: 20px;">
-							<a href="forgotpass.php" class="txt1">
-								Forgot Password?
-							</a>
-						</div>
 					</div>
-
+          <div style= " padding: 10px;" >      </div>
 					<div class="container-login100-form-btn m-t-17">
 						<button class="login100-form-btn" style=" background-color: #fff6da; color: #3b4eda;">
 							Login
@@ -96,23 +90,20 @@ include "config.php";
 session_start();
 $message="";
 if(count($_POST)>0) {
- 
-$result = mysqli_query($conn,"SELECT * FROM user WHERE email='" . $_POST["email"] . "' and password = '". $_POST["password"]."'");
+$temp = $_POST['password'];
+$sql = "UPDATE user SET password = $temp WHERE email='" . $_POST["email"]."'";
 
-$row  = mysqli_fetch_array($result);
-if(is_array($row)) {
-  $_SESSION['is_logged_in'] = true;
-$_SESSION["id"] = $row['id'];
-$_SESSION["name"] = $row['name'];
-$_SESSION["email"] = $row['email'];
-$_SESSION["create_date"] = $row['create_date'];
-} else {
-$message = "Invalid Username or Password!";
+$query_run = mysqli_query ($conn,$sql);
+
+if ($query_run) {
+   header("Location:login.php");
 }
+else {
+   echo '<script type="text/javascript"> alert("!! ERROR !!")</script>';
 }
-if(isset($_SESSION["name"])) {
-header("Location:index.php");
+
 }
+
 ?>
 
 </body>

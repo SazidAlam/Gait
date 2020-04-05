@@ -43,7 +43,7 @@ include "config.php";
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-50 p-b-90">
-
+      <h4 style="padding:10px; text-align: center; color: #3b4eda;"> Create an account in GAIT </h4>
 				<form method="post" action="" class="login100-form validate-form flex-sb flex-w">
 
         <div class="wrap-input100 validate-input m-b-16" data-validate = "name is required">
@@ -67,7 +67,7 @@ include "config.php";
       
           <div style= " padding: 10px;" >      </div>
 					<div class="container-login100-form-btn m-t-17">
-						<button name="submit" type="submit" class="login100-form-btn">
+						<button name="submit" type="submit" class="login100-form-btn" style=" background-color: #fff6da; color: #3b4eda;">
 							Register
 						</button>
 					</div>
