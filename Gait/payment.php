@@ -83,7 +83,7 @@ if(!empty($_POST['stripeToken'])){
 } 
 ?>
 
-<div class="container">
+<div class="container" style="padding:60px; text-align:centre; border: 1px blue solid;">
     <div class="status">
         <?php if(!empty($payment_id)){ ?>
             <h1 class="<?php echo $ordStatus; ?>"><?php echo $statusMsg; ?></h1>
@@ -101,5 +101,5 @@ if(!empty($_POST['stripeToken'])){
             <h1 class="error">Your Payment has Failed</h1>
         <?php } ?>
     </div>
-    <a href="index.php" class="btn-link">Back to HomePage</a>
+    <button><a href="profile.php" class="btn-link">Back to HomePage</a>  </button>
 </div>

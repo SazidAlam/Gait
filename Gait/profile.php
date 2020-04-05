@@ -59,11 +59,14 @@
       <div>
       	<h1><?php echo $_SESSION['name']; ?></h1>
       	<h3><?php echo $_SESSION["email"]; ?></h3>
-      	<h3><?php echo $_SESSION["create_date"]; ?></h3>
+        <h3><?php echo $_SESSION["create_date"]; ?></h3>
+       <h3> <a href="stripe.php"> Payment </a>  </h3>
       </div>
     </div>
     
     <div class="col-8">
+
+   
       <?php 
 
 
