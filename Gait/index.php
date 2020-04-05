@@ -29,13 +29,14 @@
 
   <nav class="navbar navbar-expand-sm mb-3">
         <div class="container">
-          <a class="navbar-brand" href="#" style="font-family: 'Bree Serif', serif; font-size:50px">GAIT</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Bree Serif', serif; font-size:50px">GAIT</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav nav-pills justify-content-end">
           <?php if(isset($_SESSION['is_logged_in'])) : ?>
 
           <li><a class="nap" href="product.php">Home</a></li>
+          <li><a class="nap" href="about.php">About</a></li>
           <li><a class="nap" href="addproduct.php">Add Product</a></li>
           <li><a class="nap" href="profile.php">Welcome <?php echo $_SESSION['name']; ?></a></li>
           <li><a class="nap" href="logout.php">Logout</a></li>
@@ -74,8 +75,9 @@
             <div class="row">
               <div class="col-md-4 ml-auto">
                 <ul class="list-unstyled links">
+                <li><a href="about.php">About Us</a></li>
                   <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">hello@mydomain.com</a></li>
+               
 
                 </ul>
               </div>
