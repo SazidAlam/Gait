@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2020 at 06:46 PM
+-- Generation Time: Apr 06, 2020 at 04:35 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -78,12 +78,6 @@ CREATE TABLE `orders` (
   `card_number` bigint(20) NOT NULL,
   `card_exp_month` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   `card_exp_year` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
-  `item_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `item_number` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `item_price` float(10,2) NOT NULL,
-  `item_price_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `paid_amount` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `paid_amount_currency` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `txn_id` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `payment_status` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL,
@@ -94,8 +88,8 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `name`, `email`, `card_number`, `card_exp_month`, `card_exp_year`, `item_name`, `item_number`, `item_price`, `item_price_currency`, `paid_amount`, `paid_amount_currency`, `txn_id`, `payment_status`, `created`, `modified`) VALUES
-(2, 'Ishrat Jahan', 'test@test.com', 4242424242424242, '12', '2022', 'Demo Product', 'PN12345', 2500.00, 'USD', '2500', 'usd', 'txn_1GUbTgKV46qoqwE8PM3nLcQY', 'succeeded', '2020-04-05 22:37:45', '2020-04-05 22:37:45');
+INSERT INTO `orders` (`id`, `name`, `email`, `card_number`, `card_exp_month`, `card_exp_year`, `txn_id`, `payment_status`, `created`, `modified`) VALUES
+(6, 'test', 'test@test.com', 4000056655665556, '12', '2022', 'txn_1GUohRKV46qoqwE8BWkT0Ghn', 'succeeded', '2020-04-06 12:44:50', '2020-04-06 12:44:50');
 
 -- --------------------------------------------------------
 
@@ -138,6 +132,7 @@ CREATE TABLE `user` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `PremiumFlag` tinyint(1) NOT NULL,
   `create_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -145,11 +140,11 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `create_date`) VALUES
-(2, 'test', 'test@test.com', 'test', '2020-03-26 19:31:32'),
-(3, 'test2', 'test2@test.com', '123456', '2020-03-28 09:43:30'),
-(4, 'test 4', 'test4@test.com', '1234', '2020-03-28 13:08:36'),
-(5, 'Ishrat Jahan', 'ishrat@ishrat.com', 'ishrat', '2020-04-04 20:55:06');
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `PremiumFlag`, `create_date`) VALUES
+(2, 'test', 'test@test.com', 'test', 1, '2020-03-26 19:31:32'),
+(3, 'test2', 'test2@test.com', '123456', 0, '2020-03-28 09:43:30'),
+(4, 'test 4', 'test4@test.com', '1234', 0, '2020-03-28 13:08:36'),
+(5, 'Ishrat Jahan', 'ishrat@ishrat.com', 'ishrat', 0, '2020-04-04 20:55:06');
 
 --
 -- Indexes for dumped tables
@@ -205,7 +200,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `uploadedimage`

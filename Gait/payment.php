@@ -63,7 +63,7 @@ if(!empty($_POST['stripeToken'])){
         include_once 'dbconfig.php'; 
          
         // Insert tansaction data into the database 
-        $sql = "INSERT INTO orders(name,email,card_number,card_exp_month,card_exp_year,item_name,item_number,item_price,item_price_currency,paid_amount,paid_amount_currency,txn_id,payment_status,created,modified) VALUES('".$name."','".$email."','".$card_number."','".$card_exp_month."','".$card_exp_year."','".$itemName."','".$itemNumber."','".$itemPrice."','".$currency."','".$paidAmount."','".$paidCurrency."','".$transactionID."','".$payment_status."',NOW(),NOW())"; 
+        $sql = "INSERT INTO orders(name,email,card_number,card_exp_month,card_exp_year,txn_id,payment_status,created,modified) VALUES('".$name."','".$email."','".$card_number."','".$card_exp_month."','".$card_exp_year."','".$transactionID."','".$payment_status."',NOW(),NOW())"; 
         $insert = $con->query($sql); 
         $payment_id = $con->insert_id; 
          
@@ -81,7 +81,26 @@ if(!empty($_POST['stripeToken'])){
 }else{ 
     $statusMsg = "Error on form submission."; 
 } 
+
+// Below code turns premium Flag on when transaction is succesful
+if(!empty($payment_id)){
+    $sql = "UPDATE user SET PremiumFlag = True WHERE email='" . $_POST["email"]."' and name = '". $_POST['name']."'";
+
+    $query_run = mysqli_query ($conn,$sql);
+    if ($query_run) {
+        echo 'gotchu fam';
+     }
+     else {
+        echo 'sorry fam';
+     }
+
+
+}
+
+
+
 ?>
+
 
 <div class="container" style="padding:60px; text-align:centre; border: 1px blue solid;">
     <div class="status">
@@ -91,12 +110,9 @@ if(!empty($_POST['stripeToken'])){
             <h4>Payment Information</h4>
             <p><b>Reference Number:</b> <?php echo $payment_id; ?></p>
             <p><b>Transaction ID:</b> <?php echo $transactionID; ?></p>
-            <p><b>Paid Amount:</b> <?php echo $paidAmount.' '.$paidCurrency; ?></p>
+            <p><b>Paid Amount:</b> $25</p>
             <p><b>Payment Status:</b> <?php echo $payment_status; ?></p>
-			
-            <h4>Product Information</h4>
-            <p><b>Name:</b> <?php echo $itemName; ?></p>
-            <p><b>Price:</b> <?php echo $itemPrice.' '.$currency; ?></p>
+		
         <?php }else{ ?>
             <h1 class="error">Your Payment has Failed</h1>
         <?php } ?>

@@ -56,13 +56,26 @@
     <div class="container">
   <div class="row">
     <div class="col-4"">
+
       <div>
+
+<?php if(isset($_GET['PremiumFlag'])) : ?>
+<li><a href="profile.php">Welcome <?php echo $_SESSION['name']; ?></a></li>
+<li><a  href="product.php"> add product</a></li>
+
+<?php else : ?>
+
+<li><a > Login  failed checking 123</a></li>
+<?php endif; ?>
+
+
       	<h1><?php echo $_SESSION['name']; ?></h1>
       	<h3><?php echo $_SESSION["email"]; ?></h3>
         <h3><?php echo $_SESSION["create_date"]; ?></h3>
-       <h3> <a href="stripe.php"> Payment </a>  </h3>
+        <h3> <a href="stripe.php"> Payment </a>  </h3>
       </div>
     </div>
+
     
     <div class="col-8">
 
