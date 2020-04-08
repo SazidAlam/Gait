@@ -83,19 +83,19 @@ if(!empty($_POST['stripeToken'])){
 } 
 
 // Below code turns premium Flag on when transaction is succesful
-if(!empty($payment_id)){
-    $sql = "UPDATE user SET PremiumFlag = True WHERE email='" . $_POST["email"]."' and name = '". $_POST['name']."'";
+// if(!empty($payment_id)){
+//     $sql = "UPDATE user SET PremiumFlag = True WHERE email='" . $_POST["email"]."' and name = '". $_POST['name']."'";
 
-    $query_run = mysqli_query ($conn,$sql);
-    if ($query_run) {
-        echo 'gotchu fam';
-     }
-     else {
-        echo 'sorry fam';
-     }
+//     $query_run = mysqli_query ($conn,$sql);
+//     if ($query_run) {
+//         echo 'gotchu fam';
+//      }
+//      else {
+//         echo 'sorry fam';
+//      }
 
 
-}
+// }
 
 
 
@@ -117,5 +117,5 @@ if(!empty($payment_id)){
             <h1 class="error">Your Payment has Failed</h1>
         <?php } ?>
     </div>
-    <button><a href="profile.php" class="btn-link">Back to HomePage</a>  </button>
+    <button><a href="index.php" class="btn-link">Back to HomePage</a>  </button>
 </div>

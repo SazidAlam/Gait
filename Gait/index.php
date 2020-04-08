@@ -36,13 +36,13 @@
           <?php if(isset($_SESSION['is_logged_in'])) : ?>
 
           <li><a class="nap" href="product.php">Home</a></li>
-          <li><a class="nap" href="about.php">About</a></li>
+          <!-- <li><a class="nap" href="about.php">About</a></li> -->
           <li><a class="nap" href="addproduct.php">Add Product</a></li>
           <li><a class="nap" href="profile.php">Welcome <?php echo $_SESSION['name']; ?></a></li>
           <li><a class="nap" href="logout.php">Logout</a></li>
           <?php else : ?>
-          <li><a class="nap" href="login.php"><i class="fas fa-user"></i> Login</a></li>
-          <li><a class="nap" href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
+          <li><a class="nap" href="login.php"><i class="fas fa-user"></i> Sign In</a></li>
+          <li><a class="nap" href="register.php"><i class="fas fa-user-plus"></i> Sign Up</a></li>
         <?php endif; ?>
           </ul>
           </div>
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-<!----- Footer ----->
+      <!-- footer -->
     <div class="footer site-section">
       <div class="container">
         <div class="row">
@@ -83,22 +83,17 @@
               </div>
               <div class="col-md-4">
                 <ul class="list-unstyled links">
-                  <li><a href="home.html">Home</a></li>
-                  <li><a href="#">Sign In</a></li>
-                  <li><a href="#">Sign Up</a></li>
+                  <li><a href="product.php">Home</a></li>
+                  <li><a href="login.php">Sign In</a></li>
+                  <li><a href="register.php">Sign Up</a></li>
                 </ul>
               </div>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="site-section">
-      <div class="container">
-        <div class="row mb-4 text-center">
-          <div class="col">
+            </div>
+            
+           <div class="row col-md-4">
+            <div class="col-12">
             <a href="#"><span class="m-2 fa fa-facebook fa-3x"></span></a>
             <a href="#"><span class="m-2 fa fa-twitter fa-3x"></span></a>
             <a href="#"><span class="m-2 fa fa-linkedin fa-3x"></span></a>
@@ -106,8 +101,18 @@
 
           </div>
         </div>
-
+          
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="row col-md-4" style="">
+      <div class="col-12" style="text-align: center;">
+        <p>Copyright ©. 2020 <a href="alogin.php">GAIT</a> All rights reserved.</p>
+      </div>
+      
+    </div>
     </div>
 
 
