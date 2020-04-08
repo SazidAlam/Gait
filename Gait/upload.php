@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "mysql", "gait");
+$connect = mysqli_connect("localhost", "root", "", "gait");
 $output = '';
 if(isset($_POST["query"]))
 {

@@ -10,7 +10,7 @@
   include "header.php";
   include "config.php";
   include "premium.php";
-  session_start();
+  //session_start();
 
 //if button with the name uploadfilesub has been clicked
 if(isset($_POST['uploadfilesub'])) {

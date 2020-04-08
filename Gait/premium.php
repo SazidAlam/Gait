@@ -1,16 +1,16 @@
 <?php
 include "header.php";
-include "config.php";
-
+//include "config.php";
+require_once 'config.php'; 
 session_start();
 
 $nam = $_SESSION['name'];
 $query = "SELECT * FROM orders";
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_array($result);
-if ($row['name'] === $_SESSION['name']) : ?>
-
-	<html>
+while ($row = mysqli_fetch_array($result)) : ?> 
+ <?php if ($row['name'] === $_SESSION['name']) :  ?>
+  <html>
 <head>
   <title>Gait</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -91,8 +91,9 @@ if ($row['name'] === $_SESSION['name']) : ?>
 
 </body>
 </html>
-<?php else : ?>
-	<html>
+
+<?php else: ?>
+  <html>
  <head>
   <title>Gait- About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -208,7 +209,7 @@ input[type=submit]:hover {
        <!-- <h3 class="panel-title">Charge <?//php echo '$'.$itemPrice; ?> with Stripe</h3>   -->
        <h1 class="panel-title" style="padding:10px; text-align: center; color: #3b4eda; font-weight: bold;">You need to upgrade to premium member for adding a product.</h1>
 
-		
+    
         <!-- Product Info 
         <p><b>Item Name:</b> <? //php echo $itemName; ?></p>   
         <p><b>Price:</b> <? //php echo '$'.$itemPrice.' '.$currency; ?></p>   -->
@@ -217,7 +218,7 @@ input[type=submit]:hover {
     <div class="panel-body" style=" background-color: #fff6da;">
         <!-- Display errors returned by createToken -->
         <div class="payment-status"></div>
-		
+    
         <!-- Payment form -->
         <form action="payment.php" method="POST" id="paymentFrm">
             <div class="form-group">
@@ -287,7 +288,7 @@ $(document).ready(function() {
     $("#paymentFrm").submit(function() {
         // Disable the submit button to prevent repeated clicks
         $('#payBtn').attr("disabled", "disabled");
-		
+    
         // Create single-use token to charge the user
         Stripe.createToken({
             number: $('#card_number').val(),
@@ -295,7 +296,7 @@ $(document).ready(function() {
             exp_year: $('#card_exp_year').val(),
             cvc: $('#card_cvc').val()
         }, stripeResponseHandler);
-		
+    
         // Submit from callback
         return false;
     });
@@ -304,4 +305,8 @@ $(document).ready(function() {
 
 </body>
 </html>
-<?php  endif; ?>
+
+<?php endif; endwhile; ?>
+ 
+
+
