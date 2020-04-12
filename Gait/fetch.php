@@ -10,7 +10,6 @@ if(isset($_POST["query"]))
 	$query = "
 	SELECT * FROM uploadedimage
 	WHERE name LIKE '%".$search."%'
-	OR link LIKE '%".$search."%'
 	";
 }
 else
@@ -28,17 +27,17 @@ if(mysqli_num_rows($result) > 0)
 							<th>Category</th>
 							
 							<th>Product Image</th>
-							<th>About Product</th>
+							<th>Description</th>
 						</tr>';
 	while($row = mysqli_fetch_array($result))
 	{
 		$output .= '
 			<tr>
 				<td>'.$row["name"].'</td>
-				<td>'.$row["link"].'</td>
+				<td>'.$row["body"].'</td>
 				
 				<td>'.'<img src="imagesuploadedf/'.$row['imagename'].'" height="150" width="150" >'.'</td>
-				<td>'.$row["body"].'</td>
+				<td>'.$row["link"].'</td>
 			</tr>
 
 		';

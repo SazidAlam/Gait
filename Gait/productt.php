@@ -27,6 +27,7 @@ $result = mysqli_query($conn, $query);
 //     echo '<img src="imagesuploadedf/'.$img.'" height="150" width="150" >';
 //     }
 
+
 ?>
 
 <html>
@@ -51,27 +52,32 @@ $result = mysqli_query($conn, $query);
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <div class="container">
-          <a class="navbar-brand" href="aproduct.php" style="font-family: 'Bree Serif', serif">GAIT</a>
+          <a class="navbar-brand" href="index.php" style="font-family: 'Bree Serif', serif">GAIT</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav nav-pills justify-content-end">
           
 
-          <li><a class="na" href="aproduct.php">Product</a></li>
-          <li><a class="na" href="user.php">User</a></li>
-          <li><a class="na" href="category.php">Category</a></li>
-          <li><a class="na" href="aregister.php">Register</a></li>
-          <li><a class="na" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
+          <li><a class="na" href="product.php">Home</a></li>
+          <li><a class="na" href="addproduct.php">Add Product</a></li>
+          <li><a class="na" href="profile.php">Welcome <?php echo $_SESSION['name']; ?></a></li>
           <li><a class="na" href="logout.php">Logout</a></li>
           
           </ul>
           </div>
     </nav>
 
-    <div>
-      <a class="btn btn-default" href="aaddproduct.php">Add Product</a>
-     <?php 
+    <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon">Search</span>
+          <input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+        </div>
+      </div>
+      <br />
+      <div id="result"></div>
 
+    <div>
+     <?php 
 
     while($row=mysqli_fetch_array($result))   : ?>
     
@@ -84,7 +90,6 @@ $result = mysqli_query($conn, $query);
 
       <?php echo '<img src="imagesuploadedf/'.$img.'" height="150" width="150" >'; ?>
       <a class="btn btn-default" href="<?php echo $row['link']; ?>" target="_blank">Go To Website</a>
-      <a class="btn btn-default" href="" target="_blank">Delete Product</a>
     </div>
     
     <?php $img = $row['imagename']; endwhile; ?>
@@ -99,4 +104,34 @@ $result = mysqli_query($conn, $query);
 
 </body>
 </html>
+
+<script>
+$(document).ready(function(){
+  load_data();
+  function load_data(query)
+  {
+    $.ajax({
+      url:"product.php",
+      method:"post",
+      data:{query:query},
+      success:function(data)
+      {
+        $('#result').html(data);
+      }
+    });
+  }
+  
+  $('#search_text').keyup(function(){
+    var search = $(this).val();
+    if(search != '')
+    {
+      load_data(search);
+    }
+    else
+    {
+      load_data();      
+    }
+  });
+});
+</script>
 

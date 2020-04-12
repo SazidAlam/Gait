@@ -21,12 +21,11 @@ $folder = 'imagesuploadedf/';
 //function for saving the uploaded images in a specific folder
 move_uploaded_file($filetmpname, $folder.$filename);
 
-$uname = $_SESSION['name'];
 $name = $_POST['name'];
 $body = $_POST['body'];
 $link = $_POST['link'];
 //inserting image details (ie image name) in the database
-$sql = "INSERT INTO `uploadedimage` (`uname`,`imagename`, `pname`, `body`, `link`)  VALUES ('$uname','$filename', '$name', '$body', '$link')";
+$sql = "INSERT INTO `uploadedimage` (`imagename`, `name`, `body`, `link`)  VALUES ('$filename', '$name', '$body', '$link')";
 $qry = mysqli_query($conn,  $sql);
 if( $qry) {
   $message = "Product has been uploaded";
