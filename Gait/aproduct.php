@@ -77,17 +77,17 @@ $result = mysqli_query($conn, $query);
     
     <div class="well">
       <h3><?php echo $row['name']; ?></h3>
-      <small><?php echo $row['body']; ?></small>
+      <small><?php echo $row['link']; ?></small>
       <hr />
       <p><?php echo $row['body']; ?></p>
       <br />
 
-      <?php echo '<img src="imagesuploadedf/'.$img.'" height="150" width="150" >'; ?>
+      <?php echo '<img src="imagesuploadedf/'.$row['imagename'].'" height="150" width="150" >'; ?>
       <a class="btn btn-default" href="<?php echo $row['link']; ?>" target="_blank">Go To Website</a>
       <a class="btn btn-default" href="" target="_blank">Delete Product</a>
     </div>
     
-    <?php $img = $row['imagename']; endwhile; ?>
+    <?php endwhile; ?>
 
     
     </div>

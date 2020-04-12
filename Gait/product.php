@@ -1,4 +1,10 @@
+<?php
 
+include "config.php";
+include "header.php";
+session_start();
+
+?>
 
 <html>
 	<head>
@@ -41,7 +47,7 @@
 			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">Search</span>
-					<input type="text" name="search_text" id="search_text" placeholder="Search by Product Name" class="form-control" />
+					<input type="text" name="search_text" id="search_text" placeholder="Search by Category or Product Name" class="form-control" />
 				</div>
 			</div>
 			<br />

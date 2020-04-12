@@ -1,6 +1,9 @@
-.na {
-  color: #f8fcff;
-}
+.nap {
+  /*color: #f8fcff;    */
+  color: #337ab7;
+  font-size: medium;
+
+}   
 .footer {
    position: static;
    left: 0;
@@ -14,5 +17,12 @@
 }
 
 .panel {
-	width: 100%;
+  width: 100%;
+ 
+  
+}
+
+h1 {
+ color: green;
+
 }
