@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $query);
   <title>Gait</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet"  href="assets/css/home.css">
+    <link rel="stylesheet"  href="assets/css/products.css">
     <link rel="stylesheet"  href="assets/css/main.css">
      <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
      <link rel="stylesheet"  href="/fonts/style.css">
@@ -47,6 +47,42 @@ $result = mysqli_query($conn, $query);
     <script src="https://kit.fontawesome.com/3ec1573dc2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style type="text/css">
+    p {
+      text-align: justify;
+      padding: 10px;
+    }
+    h4 {
+      padding: 50px 10px;
+      text-align: justify;
+    }
+    .btn {
+      width: -webkit-fill-available;
+      padding: 10px;
+      margin: 2px;
+      position: center;
+      
+    }
+    div {
+      padding: 5px;
+    }
+    body {
+      color: white;
+  background: #1F1C2C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .btn-default {
+      color: #fff;
+      background-color: transparent;
+      border-color: #7a849e;
+    }
+    img {
+  border-radius: 8px;
+}
+
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
@@ -69,23 +105,30 @@ $result = mysqli_query($conn, $query);
     </nav>
 
     <div>
-      <a class="btn btn-default" href="aaddproduct.php">Add Product</a>
+    
      <?php 
 
 
     while($row=mysqli_fetch_array($result))   : ?>
     
-    <div class="well">
-      <h3><?php echo $row['name']; ?></h3>
-      <small><?php echo $row['link']; ?></small>
-      <hr />
-      <p><?php echo $row['body']; ?></p>
-      <br />
-
-      <?php echo '<img src="imagesuploadedf/'.$row['imagename'].'" height="150" width="150" >'; ?>
-      <a class="btn btn-default" href="<?php echo $row['link']; ?>" target="_blank">Go To Website</a>
-      <a class="btn btn-default" href="" target="_blank">Delete Product</a>
+    <div class="product">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-md-2"><h4><?php echo $row['pname']; ?></h4></div>
+          <div class="col-lg-3 col-md-3"><?php echo '<img src="imagesuploadedf/'.$row['imagename'].'" height="200" width="200" >'; ?></div>
+          <div class="col-lg-2 col-md-2"><h4><?php echo $row['link']; ?></h4></div>
+          <div class="col-lg-3 col-md-3"><p><?php echo $row['body']; ?></p></div>
+          <div class="col-lg-2 col-md-2">
+            <button class="btn btn-default">Link</button>
+            </br>
+            <button class="btn btn-default">Delete</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <hr>
+
     
     <?php endwhile; ?>
 

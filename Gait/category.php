@@ -47,6 +47,35 @@ $result = mysqli_query($conn, $query);
     <script src="https://kit.fontawesome.com/3ec1573dc2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style type="text/css">
+    h4 {
+      text-align: justify;
+      padding: 10px;
+    }
+    
+    .btn {
+      
+      padding: 10px;
+      margin: 2px;
+      position: center;
+      
+    }
+    div {
+      padding: 5px;
+    }
+    body {
+      color: white;
+  background: #1F1C2C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .btn-default {
+      color: #fff;
+      background-color: transparent;
+      border-color: #7a849e;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
@@ -69,20 +98,23 @@ $result = mysqli_query($conn, $query);
     </nav>
 
     <div>
-      <a class="btn btn-default" href="addcategory.php">Add Category</a>
+      
      <?php 
 
 
     while($row=mysqli_fetch_array($result))   : ?>
-    
-    <div class="well">
-      <h3><?php echo $row['name']; ?></h3>
-      <small><?php echo $row['create_date']; ?></small>
-      <hr />
-      
-      <a class="btn btn-default" href="" target="_blank">Delete Category</a>
-    </div>
-    
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4"><h4><?php echo $row['name']; ?></h4></div>
+          <div class="col-lg-4 col-md-4"><h4><?php echo $row['create_date']; ?></h4></div>
+          <div class="col-lg-4 col-md-4">
+            <button class="btn btn-default">Remove Category</button>
+          </div>
+        </div>
+      </div>
+    <hr>
+
     <?php endwhile; ?>
 
     
