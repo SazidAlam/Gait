@@ -130,7 +130,7 @@ $message = "Invalid Username or Password!";
 }
 }
 if(isset($_SESSION["name"])) {
-header("Location:aproduct.php");
+header("Location:dashboard.php");
 ob_end_flush();
 }
 ?>
