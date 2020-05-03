@@ -111,7 +111,7 @@
 
     <footer id="footer">
         <div class="container">
-            <p>Copyright &copy; 2020 3 Survivors. All Rights Reserved</p>
+            <p>Copyright &copy; 2020 <a href="alogin.php">Gait</a>. All Rights Reserved</p>
         </div>
     </footer>
 
