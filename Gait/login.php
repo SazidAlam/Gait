@@ -92,7 +92,7 @@ include "config.php";
 </html>
 
 
- <?php
+<?php
 session_start();
 $message="";
 if(count($_POST)>0) {

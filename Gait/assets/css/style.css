@@ -1,7 +1,4 @@
 
-
-
-
 .main-color-bg{
   background-color: #ed1c24 !important;
   border-color: #c0392b !important;
@@ -137,3 +134,6 @@
   flex-basis:27%;
 }
 
+body {
+  background-color: #ffffff;
+}

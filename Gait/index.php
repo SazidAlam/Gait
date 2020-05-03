@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet"  href="assets/css/home.css">
+    <link rel="stylesheet"  href="assets/css/style.css">
     <link rel="stylesheet"  href="assets/css/main.css">
      <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
      <link rel="stylesheet"  href="assets/fonts/style.css">
@@ -21,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/3ec1573dc2.js" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -107,17 +109,17 @@
       </div>
     </div>
 
-    <div class="row col-md-4" style="">
-      <div class="col-12" style="text-align: center;">
-        <p>Copyright ©. 2020 <a href="alogin.php">GAIT</a> All rights reserved.</p>
-      </div>
-      
-    </div>
-    </div>
+    <footer id="footer">
+        <div class="container">
+            <p>Copyright &copy; 2020 3 Survivors. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    
 
 
 
-    </div>
+
 
 
 

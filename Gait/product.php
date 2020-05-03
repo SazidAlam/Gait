@@ -11,7 +11,7 @@ session_start();
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Gait</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<link rel="stylesheet"  href="assets/css/home.css">
+		<!-- <link rel="stylesheet"  href="assets/css/home.css"> -->
     <link rel="stylesheet"  href="assets/css/main.css">
      <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
      <link rel="stylesheet"  href="/fonts/style.css">

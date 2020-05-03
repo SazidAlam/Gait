@@ -17,6 +17,7 @@ session_start();
      <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
      <link rel="stylesheet"  href="/fonts/style.css">
      <script src="assets/js/typed.js"></script>
+     <script src="assets/js/form.js"></script>
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
@@ -70,31 +71,31 @@ background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, F
        <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100 p-t-50 p-b-90">
-      <h4 style="padding:10px; text-align: center; color: #757272;"> Register Admin </h4>
-        <form method="post" action="" class="login100-form validate-form flex-sb flex-w">
+      <h4 style="padding:10px; text-align: center; color: #3b4eda;"> Admin Registration </h4>
+        <form name="registerform" method="post" onsubmit="return validateForm()" action="" class="login100-form validate-form flex-sb flex-w" >
 
         <div class="wrap-input100 validate-input m-b-16" data-validate = "name is required">
-            <input class="input100" type="text" name="name" placeholder="Username">
+            <input class="input100" type="text" name="name" placeholder="Username" required>
             <span class="focus-input100"></span>
           </div>
           
         <div style= " padding: 10px;" >      </div>
 
           <div class="wrap-input100 validate-input m-b-16" data-validate = "email is required">
-            <input class="input100" type="text" name="email" placeholder="Email">
+            <input class="input100" type="text" name="email" placeholder="Email" type="email" required>
             <span class="focus-input100"></span>
           </div>
           
           <div style= " padding: 10px;" >      </div>
           
           <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-            <input class="input100" type="password" name="password" placeholder="Password">
+            <input class="input100" type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
             <span class="focus-input100"></span>
           </div>
       
           <div style= " padding: 10px;" >      </div>
           <div class="container-login100-form-btn m-t-17">
-            <button name="submit" type="submit" class="login100-form-btn" style=" background-color: #5d5971; color: #e6e6e6;">
+            <button name="submit" type="submit" class="login100-form-btn" style=" background-color: #fff6da; color: #3b4eda;">
               Register
             </button>
           </div>
