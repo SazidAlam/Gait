@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $query);
   <title>Gait</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet"  href="assets/css/products.css">
+    <link rel="stylesheet"  href="assets/css/product.css">
     <link rel="stylesheet"  href="assets/css/main.css">
      <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
      <link rel="stylesheet"  href="/fonts/style.css">
@@ -67,10 +67,11 @@ $result = mysqli_query($conn, $query);
       padding: 5px;
     }
     body {
-      color: white;
-  background: #1F1C2C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      color: #fff;
+      background: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(18,18,18,1) 100%);
+
+
+
 
     }
     .btn-default {
@@ -87,18 +88,18 @@ background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, F
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <div class="container">
-          <a class="navbar-brand" href="aproduct.php" style="font-family: 'Bree Serif', serif">GAIT</a>
+          <a class="navbar-brand" href="aproduct.php">GAIT</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav nav-pills justify-content-end">
           
 
-          <li><a class="na" href="aproduct.php">Product</a></li>
-          <li><a class="na" href="user.php">User</a></li>
-          <li><a class="na" href="category.php">Category</a></li>
-          <li><a class="na" href="aregister.php">Register</a></li>
-          <li><a class="na" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
-          <li><a class="na" href="logout.php">Logout</a></li>
+          <li><a class="nap" href="aproduct.php">Product</a></li>
+          <li><a class="nap" href="user.php">User</a></li>
+          <li><a class="nap" href="category.php">Category</a></li>
+          <li><a class="nap" href="aregister.php">Register</a></li>
+          <li><a class="nap" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
+          <li><a class="nap" href="logout.php">Logout</a></li>
           
           </ul>
           </div>

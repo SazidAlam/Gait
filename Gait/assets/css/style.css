@@ -1,11 +1,7 @@
 
-.main-color-bg{
-  background-color: #ed1c24 !important;
-  border-color: #c0392b !important;
-  color:#ffffff !important;
+body{
+  background: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(18,18,18,1) 100%);
 }
-
-
 
 .navbar-brand img{
   width: 80px;
@@ -15,28 +11,33 @@
 #header{
   margin-top: 40px;
   margin-bottom: 40px;
-  color: #000;
+  color: #fff;
 }
 
-#header h2{
-  font-size: 2em;
+#header h3{
+  font-size: 24px;
 }
 
 #header .btn-outline-dark{
   background: none;
-  color: #7C7C7C;
+  color: #fff;
   box-shadow: none;
   border-color: #7C7C7d;
 }
 
-#main .list-group{
-  color: #7C7C7C;
+.list-group{
+  color: #fff;
   padding-bottom: 40px;
   background-color: none;
 }
 
-#main .list-group a{
-  color: #7C7C7d;
+.button-1 {
+  color: #fff;
+  border-radius: 10px;
+}
+
+.button-1:hover {
+  color: #ed1c24;
 }
 
 
@@ -54,7 +55,7 @@
   background: none;
   text-align: left;
   margin-bottom: 10px;
-  border: 1px solid #7C7C7d;
+  border: 1px solid #fff;
 }
 
 #main .button-1 i{
@@ -64,76 +65,59 @@
 
 #main .panel-title{
   margin-bottom: 4rem;
-
 }
 
-#main #overview-box{
-  border: 1px solid red;
-  padding: 20px;
-  margin-bottom: 5px;
+.dashboard-data-1{
+  display:flex;  
+  justify-content:space-between;
 }
+
+.dashboard-data-2{
+  display:flex;
+  margin-top: 75px;
+}
+
+#product {
+  background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(93,224,255,1) 100%);
+ } 
+
+#category {
+  background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(173,174,255,1) 100%);
+} 
+
+#payment {
+  background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(243,205,255,1) 100%);
+}
+
+#premium-user {
+  background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(255,205,215,1) 100%);
+}
+
+#basic-user {
+  margin-left: 75px;
+  background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(249,255,208,1) 100%);
+}
+
+.dashboard-data-1 div, .dashboard-data-2 div {
+    border:.1px #ccc solid;
+    border-radius: 5px;
+    padding:16px;
+  }
+  
+  .box-1 {
+    flex-basis: 27%;
+  }
+  
+  .box-2 {
+    flex-basis:27%;
+  }
 
 
 #footer{
-  background: #ffffff;
-  color:#337ab7;
+  background: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(18,18,18,1) 100%);
+  color:#ffffff;
   text-align:center;
   padding:20px;
   margin-top:100px;
 }
 
-
-@media(min-width: 768px){
-  .dashboard-data-1{
-    display:flex;  
-    justify-content:space-between;
-    
-  }
-  
-  .dashboard-data-2{
-    display:flex;
-    margin-top: 75px;
-  }
-
-  #product {
-    background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(93,224,255,1) 100%);
-} 
-
-  #category {
-    background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(173,174,255,1) 100%);
-} 
-
-  #payment {
-    background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(243,205,255,1) 100%);
-}
-
-  #premium-user {
-    background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(255,205,215,1) 100%);
-}
-
-  #basic-user {
-    margin-left: 75px;
-    background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(249,255,208,1) 100%);
-
-  }
-
-}
-
-.dashboard-data-1 div, .dashboard-data-2 div{
-  border:.1px #ccc solid;
-  border-radius: 5px;
-  padding:16px;
-}
-
-
-.box-1{
-  flex-basis: 27%;  
-}
-
-.box-2{
-  flex-basis:27%;
-}
-
-body {
-  background-color: #ffffff;
-}

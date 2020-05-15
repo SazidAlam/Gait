@@ -28,13 +28,13 @@ include "config.php";
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <div class="container">
-          <a class="navbar-brand" href="index.php" style="font-family: 'Bree Serif', serif">GAIT</a>
+          <a class="navbar-brand" href="index.php">GAIT</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav nav-pills justify-content-end">
           
-          <li><a class="na" href="login.php"><i class="fas fa-user"></i> Login</a></li>
-          <li><a class="na" href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
+          <li><a class="nap" href="login.php"><i class="fas fa-user"></i> Login</a></li>
+          <li><a class="nap" href="register.php"><i class="fas fa-user-plus"></i> Register</a></li>
         
           </ul>
           </div>
@@ -44,7 +44,7 @@ include "config.php";
     <div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-50 p-b-90">
-	<h4 style="padding:10px; text-align: center; color: #3b4eda;"> Login to Your account here. </h4>
+	<h4 class="intext loghead"> Login to Your account here. </h4>
 				<form method="post" action="" class="login100-form validate-form flex-sb flex-w">
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "email is required">
@@ -66,14 +66,14 @@ include "config.php";
 						</div>
 
 						<div style= " padding: 20px;">
-							<a href="forgotpass.php" class="txt1">
+							<a href="forgotpass.php" class="intext">
 								Forgot Password?
 							</a>
 						</div>
 					</div>
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn" style=" background-color: #fff6da; color: #3b4eda;">
+						<button class="login100-form-btn login">
 							Login
 						</button>
 					</div>

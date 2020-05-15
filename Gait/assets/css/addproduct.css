@@ -1,0 +1,42 @@
+body {
+	color: #fff;
+	background: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(18,18,18,1) 100%);
+}
+
+a.btn.btn-danger{
+	width: 50%;
+	height: 50px;
+	text-align: center;
+	padding-top: 15px;
+	background-color: #343a40;
+	border-color: #fff;
+}
+
+input.btn.btn-primary {
+	width: 50%;
+	height: 50px;
+	text-align: center;;
+	background-color: #343a40;
+	border-color: #fff;
+}
+
+
+a.btn.btn-danger:hover {
+	background-color: #bd0b0b;
+}
+
+input.btn.btn-primary:hover {
+	background-color: #161c57;
+}
+
+button#payBtn.btn.btn-success {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	background-color: #343a40;
+	border-color: #fff;
+}
+
+button#payBtn.btn.btn-success:hover {
+	background-color: #5cb85c;
+}

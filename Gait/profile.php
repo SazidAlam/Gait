@@ -22,8 +22,9 @@
 	<title>Profile</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet"  href="assets/css/home.css">
+    <!-- <link rel="stylesheet"  href="assets/css/home.css"> -->
     <link rel="stylesheet"  href="assets/css/main.css">
+    <link rel="stylesheet"  href="assets/css/profile.css">
      <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
      <link rel="stylesheet"  href="/fonts/style.css">
      <script src="assets/js/typed.js"></script>
@@ -40,16 +41,16 @@
 
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <div class="container">
-          <a class="navbar-brand" href="index.php" style="font-family: 'Bree Serif', serif">GAIT</a>
+          <a class="navbar-brand" href="index.php">GAIT</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav nav-pills justify-content-end">
           
 
-          <li><a class="na" href="product.php">Home</a></li>
-          <li><a class="na" href="addproduct.php">Add Product</a></li>
-          <li><a class="na" href="profile.php">Welcome <?php echo $_SESSION['name']; ?></a></li>
-          <li><a class="na" href="logout.php">Logout</a></li>
+          <li><a class="nap" href="product.php">Home</a></li>
+          <li><a class="nap" href="addproduct.php">Add Product</a></li>
+          <li><a class="nap" href="profile.php">Welcome <?php echo $_SESSION['name']; ?></a></li>
+          <li><a class="nap" href="logout.php">Logout</a></li>
           
           </ul>
           </div>
@@ -57,14 +58,15 @@
 
     <div class="container">
   <div class="row">
-    <div class="col-4"">
-      <div>
-      	<h1><?php echo $_SESSION['name']; ?></h1>
-      	<h3><?php echo $_SESSION["email"]; ?></h3>
-      	<h3><?php echo $_SESSION["create_date"]; ?></h3>
+    <div class="col-lg-4 col-md-1">
+      <div >
+        <img class="pp" src="boy2.jpg" alt="picture">
+      	<h3 class="user"><?php echo "user". " -    " . $_SESSION['name']; ?></h3>
+      	<h3 class="user"><?php echo $_SESSION["email"]; ?></h3>
+      	<h3 class="user"><?php echo $_SESSION["create_date"]; ?></h3>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-lg-8 col-md-4">
       <?php 
 
 

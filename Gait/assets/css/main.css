@@ -1,9 +1,20 @@
 .nap {
-  /*color: #f8fcff;    */
-  color: #337ab7;
-  font-size: medium;
+  color: #ffffff;
 
-}   
+} 
+
+.navbar-brand {
+    color: #fff;
+    font-family: 'Galada', cursive;
+}
+
+.intext {
+    color: #343a40 !important;
+}
+.row a {
+  color: #343a40;
+}
+
 .footer {
    position: static;
    left: 0;
@@ -28,9 +39,13 @@ h1 {
 }
 
 #footer{
-  background: linear-gradient(58deg, rgba(0,0,0,1) 0%, rgba(0,5,73,1) 100%);
+  background: #343a40;
   color:#ffffff;
   text-align:center;
   padding:20px;
-  margin-top:100px;
+
+}
+
+p a {
+  color: #fff;
 }

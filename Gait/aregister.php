@@ -26,43 +26,22 @@ session_start();
     <script src="https://kit.fontawesome.com/3ec1573dc2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/css/bootstrap.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style type="text/css">
-    body {
-      color: white;
-  background: #1F1C2C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    }
-    .btn-default {
-      color: #fff;
-      background-color: transparent;
-      border-color: #7a849e;
-    }
-    a {
-      color: #fff;
-      font-size: large;
-
-    }
-    .bg-dark {
-      background-color: transparent;
-    }
-  </style>
+  
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
         <div class="container">
-          <a class="navbar-brand" href="aproduct.php" style="font-family: 'Bree Serif', serif">GAIT</a>
+          <a class="navbar-brand" href="aproduct.php">GAIT</a>
           <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav nav-pills justify-content-end">
           
-          <li><a class="na" href="aproduct.php">Product</a></li>
-          <li><a class="na" href="#">User</a></li>
-          <li><a class="na" href="category.php">Category</a></li>
-          <li><a class="na" href="aregister.php">Register</a></li>
-          <li><a class="na" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
-          <li><a class="na" href="logout.php">Logout</a></li>
+          <li><a class="nap" href="aproduct.php">Product</a></li>
+          <li><a class="nap" href="#">User</a></li>
+          <li><a class="nap" href="category.php">Category</a></li>
+          <li><a class="nap" href="aregister.php">Register</a></li>
+          <li><a class="nap" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
+          <li><a class="nap" href="logout.php">Logout</a></li>
         
           </ul>
           </div>
@@ -71,7 +50,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, F
        <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100 p-t-50 p-b-90">
-      <h4 style="padding:10px; text-align: center; color: #3b4eda;"> Admin Registration </h4>
+      <h4 style="padding:10px; text-align: center; "> Admin Registration </h4>
         <form name="registerform" method="post" onsubmit="return validateForm()" action="" class="login100-form validate-form flex-sb flex-w" >
 
         <div class="wrap-input100 validate-input m-b-16" data-validate = "name is required">
@@ -95,7 +74,7 @@ background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, F
       
           <div style= " padding: 10px;" >      </div>
           <div class="container-login100-form-btn m-t-17">
-            <button name="submit" type="submit" class="login100-form-btn" style=" background-color: #fff6da; color: #3b4eda;">
+            <button name="submit" type="submit" class="login100-form-btn">
               Register
             </button>
           </div>

@@ -58,10 +58,13 @@ $categoryCount  = $categoryCount;
     <title>Admin Dashboard</title>
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
 </head>
 
 <body>
@@ -74,12 +77,12 @@ $categoryCount  = $categoryCount;
           <ul class="nav nav-pills justify-content-end">
           
 
-          <li><a class="na" href="aproduct.php">Product</a></li>
-          <li><a class="na" href="user.php">User</a></li>
-          <li><a class="na" href="category.php">Category</a></li>
-          <li><a class="na" href="aregister.php">Register</a></li>
-          <li><a class="na" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
-          <li><a class="na" href="logout.php">Logout</a></li>
+          <li><a class="nap" href="aproduct.php">Product</a></li>
+          <li><a class="nap" href="user.php">User</a></li>
+          <li><a class="nap" href="category.php">Category</a></li>
+          <li><a class="nap" href="aregister.php">Register</a></li>
+          <li><a class="nap" href="#">Welcome <?php echo $_SESSION['name']; ?></a></li>
+          <li><a class="nap" href="logout.php">Logout</a></li>
           
           </ul>
           </div>
@@ -94,7 +97,6 @@ $categoryCount  = $categoryCount;
                     <h3><span><i class="fas fa-cogs"></i></span> Dashboard</h3>
                 </div>
             </div>
-
         </div>
     </header>
 
@@ -102,22 +104,22 @@ $categoryCount  = $categoryCount;
     <section id="main">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="list-group">
-                        <a href="addproduct.php"><button type="button" class="button-1"><i class="fas fa-shopping-cart"></i> Add
+                        <a href="aaddproduct.php"><button type="button" class="button-1"><i class="fas fa-shopping-cart"></i> Add
                                 Product</button></a>
                         <a href="addcategory.php"><button type="button" class="button-1"><i class="fas fa-align-left"></i> Add
                                 Category</button></a>
-                        <a href="#"><button type="button" class="button-1"><i class="fas fa-receipt"></i> Add
-                                Payment</button></a>
+                        <!-- <a href="apremium.php"><button type="button" class="button-1"><i class="fas fa-receipt"></i> Add
+                                Payment</button></a> -->
                         <a href="adduser.php"><button type="button" class="button-1"><i class="fas fa-user"></i> Add Basic
                                 User</button></a>
-                        <a href="payment.php"><button type="button" class="button-1"><i class="fas fa-user-tie"></i> Add
+                        <a href="apremium.php"><button type="button" class="button-1"><i class="fas fa-user-tie"></i> Add
                                 Premium User</button></a>
                     </div>
                 </div>
 
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <div class="dashboard-data-1">
                         <div class="box-1" id="product">
                             <span class="info-box-icon">
@@ -174,7 +176,7 @@ $categoryCount  = $categoryCount;
 
     <footer id="footer">
         <div class="container">
-            <p>Copyright &copy; 2020 3 Survivors. All Rights Reserved</p>
+            <p>Copyright &copy; 2020 Gait. All Rights Reserved</p>
         </div>
     </footer>
 

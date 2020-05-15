@@ -1,0 +1,155 @@
+@media screen and (max-width: 375px) {
+
+    .dashboard-data-1{
+      display:flex;  
+      flex-direction: column;
+    }
+    
+    .dashboard-data-2{
+      display:flex;
+      flex-direction: column;
+    }
+  
+    #product {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(93,224,255,1) 100%);
+     } 
+  
+    #category {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(173,174,255,1) 100%);
+    } 
+  
+    #payment {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(243,205,255,1) 100%);
+    }
+  
+    #premium-user {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(255,205,215,1) 100%);
+    }
+  
+    #basic-user {
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(249,255,208,1) 100%);
+    }
+  }
+
+
+  @media screen and (max-width: 441px) {
+
+    .dashboard-data-1{
+      display:flex;  
+      flex-direction: column;
+    }
+    
+    .dashboard-data-2{
+      display:flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+  
+    #product {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(93,224,255,1) 100%);
+     } 
+  
+    #category {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(173,174,255,1) 100%);
+    } 
+  
+    #payment {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(243,205,255,1) 100%);
+    }
+  
+    #premium-user {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(255,205,215,1) 100%);
+    }
+  
+    #basic-user {
+        margin-left: 0;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(249,255,208,1) 100%);
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+
+    .dashboard-data-1{
+      display:flex; 
+
+    }
+    
+    .dashboard-data-2{
+      display:flex;
+      margin-top: 0;
+    }
+  
+    #product {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(93,224,255,1) 100%);
+     } 
+  
+    #category {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(173,174,255,1) 100%);
+    } 
+  
+    #payment {
+
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(243,205,255,1) 100%);
+    }
+  
+    #premium-user {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(255,205,215,1) 100%);
+    }
+  
+    #basic-user {
+        margin-bottom: 10px;
+        /* margin-left: 50px; */
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(249,255,208,1) 100%);
+    }
+  }
+
+  @media screen (max-width: 768px) .col-md-12 {
+
+      .dashboard-data-1 {
+      display:flex; 
+
+    }
+    
+    .dashboard-data-2 {
+      display:flex;
+      margin-top: 0;
+    } 
+
+    #product {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(93,224,255,1) 100%);
+     } 
+  
+    #category {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(173,174,255,1) 100%);
+    } 
+  
+    #payment {
+
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(243,205,255,1) 100%);
+    }
+  
+    #premium-user {
+      margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(255,205,215,1) 100%);
+    }
+  
+    #basic-user {
+        margin-bottom: 10px;
+      background: linear-gradient(58deg, rgba(235,255,250,1) 0%, rgba(249,255,208,1) 100%);
+    }
+  }

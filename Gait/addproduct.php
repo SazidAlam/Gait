@@ -10,6 +10,7 @@
   include "header.php";
   include "config.php";
   include "premium.php";
+  // include "test4.php";
   session_start();
 
 //if button with the name uploadfilesub has been clicked
@@ -26,8 +27,9 @@ $uname = $_SESSION['name'];
 $name = $_POST['name'];
 $body = $_POST['body'];
 $link = $_POST['link'];
+$category = $_POST['category'];
 //inserting image details (ie image name) in the database
-$sql = "INSERT INTO `uploadedimage` (`uname`,`imagename`, `pname`, `body`, `link`)  VALUES ('$uname','$filename', '$name', '$body', '$link')";
+$sql = "INSERT INTO `uploadedimage` (`uname`,`imagename`, `pname`, `body`, `link`, `category`)  VALUES ('$uname','$filename', '$name', '$body', '$link', '$category')";
 $qry = mysqli_query($conn,  $sql);
 if( $qry) {
   $message = "Product has been uploaded";

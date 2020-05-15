@@ -1,0 +1,30 @@
+    body {
+  color: #fff;
+  background: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(18,18,18,1) 100%);
+}
+    h4 {
+      color: #fff;
+      text-align: justify;
+      padding: 10px;
+    }
+    
+    .btn {
+      
+      padding: 10px;
+      margin: 2px;
+      position: center;
+      
+    }
+    div {
+      padding: 5px;
+    }
+    
+    button.btn.btn-default {
+      color: #fff;
+      background-color: #343a40;
+      border-color: #7a849e;
+    }
+
+    div.row {
+      color: #fff;
+    }

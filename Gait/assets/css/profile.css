@@ -1,0 +1,41 @@
+body {
+	color: #fff;
+	background: radial-gradient(circle, rgba(59,59,59,1) 0%, rgba(18,18,18,1) 100%);
+}
+
+img.pp {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	border-radius: 50%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /*width: 50%;*/
+}
+
+.user {
+	border: 3px solid #343a40;
+	padding: 10px 25px;
+	border-radius: 10px;
+	background: none;
+	color: #fff;
+
+	text-align: center;
+}
+
+.well {
+	color: #fff;
+	background: none !important;
+	border: 2px solid #343a40 !important;
+}
+
+hr {
+	border-top: 1px solid #343a40 !important;
+}
+
+.row a{
+	color: #fff;
+	background-color: #343a40;
+	border: 1px solid #656e77;
+}
