@@ -11,8 +11,8 @@ $currency = "USD";
 define('STRIPE_API_KEY', 'sk_test_MaFkikwUCJWj7VA60iMhZxky00xfYPndmO');
 define('STRIPE_PUBLISHABLE_KEY', 'pk_test_cBtvg262SvdvpaPTbyPOmTYd004Y0FGB1A');
 
-//$conn = mysqli_connect("localhost","root","mysql","gait")
-$conn = mysqli_connect("localhost","root","mysql","gait")
+//$conn = mysqli_connect("localhost","root","","gait")
+$conn = mysqli_connect("localhost","root","","gait")
 			or die("cannot connected");
 
 ?>

@@ -57,7 +57,7 @@
  <div class="ftco-blocks-cover-1">
       <div class="site-section-cover half-bg">
         <div class="container">
-          <div class="row align-items-center justify-content-center">
+          <div  style="background-color: #fff6da" class="row align-items-center justify-content-center">
             <div class="col-lg-8">
               <h1 class="mb-5 font-weight-bold intext"  data-aos="fade-up">All about <span class="typed-words">Gaming</span>.</h1>
             </div>
